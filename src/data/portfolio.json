@@ -1,0 +1,107 @@
+{
+  "hero": {
+    "title": "Software Engineer Final Year Student",
+    "subtitle": "Specializing in robust backend architectures, systems design, and algorithmic analysis.",
+    "img": "https://github.com/PaladinP/Portfolio-website/blob/main/Nkosinathi's%20Picture.jpg?raw=true"
+  },
+  "about": {
+    "bio": "I am a BSc Information Technology student at the University of Johannesburg still keeping my overall average at +75%, a Computer Science 1B Assistant specializing in C++ instruction. I am a natural problem-solver with a lifelong love for mathematics that drives my analytical thinking. I am equally passionate about the arts and philosophy, finding immense value in rich, logical discussions, writing poetry, composing music, and playing the piano. Whether I am debugging a system or writing a melody, I am always searching for elegant solutions.",
+    "skills": [
+      "Java",
+      "C#",
+      "C++",
+      "VB",
+      "JavaScript",
+      "TypeScript",
+      "Xubuntu(WSL)",
+      "Git"
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Trade-Optima",
+      "tags": [
+        "JavaFX",
+        "Financial Analysis",
+        "Desktop App"
+      ],
+      "desc": "Engineered a fully functional JavaFX application dedicated to financial market technical analysis, designed with backend mathematical modeling to reliably detect structural similarities and trading chart patterns[cite: 1].",
+      "img": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
+      "demo": "https://youtu.be/aYEuNufW6zU"
+    },
+    {
+      "id": 2,
+      "title": "Creatr",
+      "tags": [
+        "ASP.NET",
+        "C#",
+        "E-Commerce",
+        "Web App"
+      ],
+      "desc": "Multi-user web application built as a team lead, featuring core backend architecture designed for product uploads, user account management, buyer catalogs, and cart/order logic[cite: 1].",
+      "img": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      "demo": "https://youtu.be/iq2SmmUtT9s"
+    },
+    {
+      "id": 3,
+      "title": "Mall Tycoon",
+      "tags": [
+        "PropTech",
+        "B2B",
+        "Incubation Programme"
+      ],
+      "desc": "A professional B2B commercial facility management system selected for an incubation programme, featuring operational management and automated complex financial reporting workflows for large-scale properties[cite: 1].",
+      "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+      "github": "https://github.com/nkosinathi/mall-tycoon"
+    },
+    {
+      "id": 4,
+      "title": "Chess Game & Engine",
+      "tags": [
+        "Game Development",
+        "Algorithms",
+        "Chess Engine"
+      ],
+      "desc": "A custom chess implementation featuring a built-in chess engine. Explores move validation, board state representation, and algorithmic decision-making.",
+      "img": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&q=80",
+      "github": "https://github.com/PaladinP/Chess-Game"
+    },
+    {
+      "id": 5,
+      "title": "Colliding Balls Simulation",
+      "tags": [
+        "Physics Simulation",
+        "Graphics",
+        "Mathematics"
+      ],
+      "desc": "An interactive physics simulation modeling 2D elastic collisions, velocity vectors, and spatial momentum calculations.",
+      "img": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&q=80",
+      "github": "https://github.com/PaladinP/Colliding-Balls"
+    },
+    {
+      "id": 6,
+      "title": "Flappy Bird Clone",
+      "tags": [
+        "Game Dev",
+        "Logic",
+        "Interactive"
+      ],
+      "desc": "A recreation of the classic arcade game featuring custom game loops, collision detection, and score management.",
+      "img": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80",
+      "github": "https://github.com/PaladinP/Flappy-Bird"
+    },
+    {
+      "id": 7,
+      "title": "CySentinel",
+      "tags": [
+        "Full-Stack",
+        "Cybersecurity",
+        "Informatics",
+        "Still in progress"
+      ],
+      "desc": "A full-stack cybersecurity application developed as a final-year Informatics group project.",
+      "img": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
+    }
+  ]
+}
