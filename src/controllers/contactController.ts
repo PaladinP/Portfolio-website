@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
-import nodemailer from 'nodemailer';
-import dns from 'dns/promises';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface ContactRequest {
   name: string;
@@ -21,34 +22,16 @@ export const submitContactForm = async (
       return;
     }
 
-    // Explicitly resolve smtp.gmail.com to an IPv4 address to bypass Render's IPv6 restriction
-    const ipv4Addresses = await dns.resolve4('smtp.gmail.com');
-    const ipv4Host = ipv4Addresses[0];
-
-    const transporter = nodemailer.createTransport({
-      host: ipv4Host,
-      port: 465,
-      secure: true,
-      tls: {
-        servername: 'smtp.gmail.com', // Ensures SSL certificate validation matches
-      },
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    } as any);
-
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+    // Resend sends via secure HTTPS web traffic, avoiding all SMTP/IPv6 blocking
+    const data = await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>',
+      to: process.env.EMAIL_USER || '', // Your personal email address where you want to receive messages
       replyTo: email,
       subject: `Portfolio Contact: ${subject || 'New Message'} from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-    };
+    });
 
-    await transporter.sendMail(mailOptions);
-    console.log(`Email successfully routed from ${name} (${email})`);
-
+    console.log('Email sent successfully via Resend:', data);
     res.status(200).json({ success: true, message: "Message received successfully!" });
   } catch (error: any) {
     console.error('Contact form error:', error);
