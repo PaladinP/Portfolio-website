@@ -24,12 +24,15 @@ export const submitContactForm = async (
 
     // Configure the email transporter using your Gmail credentials from .env
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      family: 4, // Forces IPv4 to bypass Render's network restriction
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
-    });
+    } as any);
 
     // Structure the email routing
     const mailOptions = {
